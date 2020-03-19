@@ -6,11 +6,13 @@ class Loader:
     def __init__(self):
         None
 
+    #scaling down images by given factor
     def scale_down(self, img, factor):
         self.img = img
         self.factor = factor
         return cv2.resize(self.img, (int(self.img.shape[1]*self.factor),int(self.img.shape[0]*self.factor)))
 
+    #load images
     def load_images(self, folder):
         self.folder = folder
         images = []
