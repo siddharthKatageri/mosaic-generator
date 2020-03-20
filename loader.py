@@ -19,6 +19,6 @@ class Loader:
         for iname in os.listdir(self.folder):
             img = cv2.imread(os.path.join(self.folder,iname))
             if img is not None:
-                img = self.scale_down(img, 0.5)
+                #img = self.scale_down(img, 1)
                 images.append(img)
         return images
